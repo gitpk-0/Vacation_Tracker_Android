@@ -45,6 +45,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginBottom="24dp"
         android:gravity="center_horizontal"
+        android:onClick="launchDashboard"
         android:text="@string/dashboard"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintBottom_toBottomOf="parent"
