@@ -5,5 +5,5 @@ plugins {
 }
 
 ext {
-    roomVersion='2.3.0'
+    roomVersion='2.5.0'
 }
