@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void launchDashboard(View v) {
+    public void launchDashboard(View view) {
         Intent dashboard = new Intent(MainActivity.this, Dashboard.class);
         startActivity(dashboard);
     }
