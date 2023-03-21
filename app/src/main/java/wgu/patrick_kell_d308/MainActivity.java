@@ -1,7 +1,6 @@
 package wgu.patrick_kell_d308;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {

@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Patrick_Kell_D308</string>
+    <string name="app_name">Vacation Tracker</string>
+    <string name="welcome">Welcome to VacayMate, an Android app designed to help you organize and track all of your vacations!</string>
+    <string name="get_started">Get Started</string>
 </resources>
