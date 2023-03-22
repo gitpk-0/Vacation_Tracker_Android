@@ -15,7 +15,7 @@ import wgu.patrick_kell_d308.Entities.Vacation;
  * @author Patrick Kell
  */
 
-// change version any time a change is made to either Entity class
+// change version any time a change is made to either Entity class (or to clear out database)
 @Database(entities = {Vacation.class, Excursion.class}, version = 1, exportSchema = false)
 public abstract class VacationDatabaseBuilder extends RoomDatabase {
 
