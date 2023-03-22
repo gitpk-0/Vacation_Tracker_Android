@@ -3,4 +3,7 @@
     <item android:title="Add Sample Data"
         android:id="@+id/addSampleData"/>
 
+    <item android:title="Remove Sample Data"
+        android:id="@+id/removeSampleData"/>
+
 </menu>

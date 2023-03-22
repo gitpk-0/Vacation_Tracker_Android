@@ -27,15 +27,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
+        Repository repo = new Repository(getApplication());
         switch (item.getItemId()) {
             case R.id.addSampleData:
-                Repository repo = new Repository(getApplication());
 
                 Vacation vacation = new Vacation(0, "Costa Rica", "AirBnB", "July 23", "July 30");
                 repo.insert(vacation);
 
                 Excursion excursion = new Excursion(0, "Surfing", "July 24", 0);
                 repo.insert(excursion);
+                return true;
+
+            case R.id.removeSampleData:
+                for (Vacation vaca : repo.getAllVacations()) {
+                    repo.delete(vaca);
+                }
+
+                for (Excursion excur: repo.getAllExcursions()) {
+                    repo.delete(excur);
+                }
                 return true;
         }
         return super.onOptionsItemSelected(item);
