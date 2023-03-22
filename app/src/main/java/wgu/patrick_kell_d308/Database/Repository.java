@@ -21,7 +21,7 @@ public class Repository {
     private List<Vacation> mAllVacations;
     private List<Excursion> mAllExcursions;
 
-    private static int NUMBER_OF_THREADS;
+    private static int NUMBER_OF_THREADS = 4;
     static final ExecutorService databaseExecutor = Executors.newFixedThreadPool(NUMBER_OF_THREADS);
 
     public Repository(Application application) {
@@ -29,6 +29,7 @@ public class Repository {
         mVacationDAO = db.vacationDAO();
         mExcursionDAO = db.excursionDAO();
     }
+    public Repository() {}
 
     public List<Vacation> getAllVacations() {
         databaseExecutor.execute(() -> {
@@ -74,7 +75,7 @@ public class Repository {
             e.printStackTrace();
         }
     }
-    
+
     public List<Excursion> getAllExcursions() {
         databaseExecutor.execute(() -> {
             mAllExcursions = mExcursionDAO.getAllExcursions();
