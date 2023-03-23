@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="vacaymate">VacayMate</string>
+    <string name="view_excursions_for_this_vacation">View Excursions for this Vacation</string>
+    <string name="vacation_title">Vacation Title</string>
+    <string name="lodging_type">Lodging Type</string>
+    <string name="start_date">Start Date</string>
 </resources>

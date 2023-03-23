@@ -1,15 +1,12 @@
 package wgu.patrick_kell_d308.UI;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import wgu.patrick_kell_d308.R;
 
@@ -18,18 +15,36 @@ import wgu.patrick_kell_d308.R;
  */
 public class VacationDetails extends AppCompatActivity {
 
+    EditText vacationTitle;
+    EditText lodgingType;
+    String title;
+    String lodging;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashboard);
-        FloatingActionButton fab = findViewById(R.id.addVacationBtn);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent excursionDetails = new Intent(VacationDetails.this, ExcursionDetails.class);
-                startActivity(excursionDetails);
-            }
-        });
+        setContentView(R.layout.activity_vacation_details);
+
+        vacationTitle = findViewById(R.id.vacationTitle);
+        lodgingType = findViewById(R.id.lodgingType);
+
+        title = getIntent().getStringExtra("title");
+        lodging = getIntent().getStringExtra("lodging type");
+
+        vacationTitle.setText(title);
+        lodgingType.setText(lodging);
+
+
+        // FloatingActionButton fab = findViewById(R.id.addVacationBtn);
+        // fab.setOnClickListener(new View.OnClickListener() {
+        //     @Override
+        //     public void onClick(View view) {
+        //         Intent excursionDetails = new Intent(VacationDetails.this, ExcursionDetails.class);
+        //         startActivity(excursionDetails);
+        //     }
+        // });
+
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
