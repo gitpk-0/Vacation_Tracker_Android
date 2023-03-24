@@ -6,16 +6,133 @@
     android:layout_height="match_parent"
     tools:context=".UI.AddVacation">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/addExcursionBtn"
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="409dp"
+        android:layout_height="200dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vacation_title" />
+
+                <EditText
+                    android:id="@+id/vacationTitle"
+                    android:layout_width="201dp"
+                    android:layout_height="wrap_content"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lodging_type" />
+
+                <EditText
+                    android:id="@+id/lodgingType"
+                    android:layout_width="201dp"
+                    android:layout_height="wrap_content"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/start_date" />
+
+                <Button
+                    android:id="@+id/startDatePickerBtn"
+                    style="?android:spinnerStyle"
+                    android:layout_width="185dp"
+                    android:layout_height="43dp"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="120dp"
+                    android:text="todo start datepicker"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="End Date" />
+
+                <Button
+                    android:id="@+id/endDatePickerBtn"
+                    style="?android:spinnerStyle"
+                    android:layout_width="193dp"
+                    android:layout_height="43dp"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="120dp"
+                    android:text="todo end datepicker"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/viewExcursionsBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="24dp"
-        android:clickable="true"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="@string/add_excursions_for_this_vacation"
         android:onClick="launchAddExcursion"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/baseline_add_24" />
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollview" />
+
+    <Button
+        android:id="@+id/saveVacationBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="SAVE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewExcursionsBtn" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
