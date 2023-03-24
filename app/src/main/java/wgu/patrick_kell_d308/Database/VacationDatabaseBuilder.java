@@ -29,7 +29,8 @@ public abstract class VacationDatabaseBuilder extends RoomDatabase {
         if (INSTANCE == null) {
             synchronized (VacationDatabaseBuilder.class) {
                 if (INSTANCE == null) {
-                    INSTANCE = Room.databaseBuilder(context.getApplicationContext(), VacationDatabaseBuilder.class, "VacationDatabase.db")
+                    INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
+                                    VacationDatabaseBuilder.class, "VacationDatabase.db")
                             .fallbackToDestructiveMigration()
                             .build();
                 }

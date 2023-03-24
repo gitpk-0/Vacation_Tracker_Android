@@ -68,7 +68,6 @@
                     android:id="@+id/startDatePickerBtn"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:text="Start Date"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
                     tools:layout_editor_absoluteX="164dp"
@@ -105,8 +104,8 @@
 
     <Button
         android:id="@+id/viewExcursionsBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="320dp"
+        android:layout_height="66dp"
         android:layout_marginTop="52dp"
         android:backgroundTint="@color/teal_700"
         android:text="@string/view_excursions_for_this_vacation"
@@ -117,17 +116,15 @@
 
     <Button
         android:id="@+id/saveVacationBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_width="157dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="48dp"
         android:onClick="onSave"
-        android:text="SAVE"
+        android:text="SAVE VACATION"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewExcursionsBtn" />
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

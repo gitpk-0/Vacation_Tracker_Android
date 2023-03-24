@@ -14,6 +14,9 @@ public class AddVacation extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_vacation);
+
+        // startDatePickerBtn.setText(currentDate);
+        // endDatePickerBtn.setText(currentDate);
     }
 
     public void launchAddExcursion(View view) {
