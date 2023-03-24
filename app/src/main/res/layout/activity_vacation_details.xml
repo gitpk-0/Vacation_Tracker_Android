@@ -26,7 +26,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:text="@string/vacation_title" />
 
@@ -43,7 +43,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:text="@string/lodging_type" />
 
@@ -60,24 +60,19 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:text="@string/start_date" />
 
                 <Button
                     android:id="@+id/startDatePickerBtn"
-                    style="?android:spinnerStyle"
-                    android:layout_width="185dp"
-                    android:layout_height="43dp"
-                    android:layout_marginLeft="120dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginRight="120dp"
-                    android:text="todo start datepicker"
-                    android:textAlignment="textStart"
-                    android:textColor="@color/black"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Start Date"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    tools:layout_editor_absoluteX="164dp"
+                    tools:layout_editor_absoluteY="186dp" />
 
             </LinearLayout>
 
@@ -87,23 +82,21 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:text="End Date" />
 
                 <Button
                     android:id="@+id/endDatePickerBtn"
-                    style="?android:spinnerStyle"
-                    android:layout_width="193dp"
-                    android:layout_height="43dp"
-                    android:layout_marginLeft="120dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginRight="120dp"
-                    android:text="todo end datepicker"
-                    android:textColor="@color/black"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:rotationX="0"
+                    android:text="End Date"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    tools:layout_editor_absoluteX="164dp"
+                    tools:layout_editor_absoluteY="186dp" />
+
             </LinearLayout>
         </LinearLayout>
 
@@ -127,11 +120,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
+        android:onClick="onSave"
         android:text="SAVE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewExcursionsBtn" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
