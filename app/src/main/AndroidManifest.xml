@@ -19,7 +19,7 @@
         <activity
             android:name=".UI.VacationDetails"
             android:label="Vacation Details"
-            android:parentActivityName=".UI.Dashboard"
+            android:parentActivityName=".UI.VacationDashboard"
             android:exported="false" />
         <activity
             android:name=".UI.ExcursionDetails"
@@ -29,10 +29,10 @@
         <activity
             android:name=".UI.AddVacation"
             android:label="Add a new Vacation"
-            android:parentActivityName=".UI.Dashboard"
+            android:parentActivityName=".UI.VacationDashboard"
             android:exported="false" />
         <activity
-            android:name=".UI.Dashboard"
+            android:name=".UI.VacationDashboard"
             android:exported="false"
             android:label="My Vacation Dashboard"
             android:parentActivityName=".UI.MainActivity" />

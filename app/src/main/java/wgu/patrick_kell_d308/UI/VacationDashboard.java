@@ -3,6 +3,7 @@ package wgu.patrick_kell_d308.UI;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -14,7 +15,7 @@ import wgu.patrick_kell_d308.Database.Repository;
 import wgu.patrick_kell_d308.Entities.Vacation;
 import wgu.patrick_kell_d308.R;
 
-public class Dashboard extends AppCompatActivity {
+public class VacationDashboard extends AppCompatActivity {
 
     private Repository repo;
 
@@ -34,8 +35,22 @@ public class Dashboard extends AppCompatActivity {
     }
 
     public void launchAddVacation(View view) {
-        Intent addVacation = new Intent(Dashboard.this, AddVacation.class);
+        Intent addVacation = new Intent(VacationDashboard.this, AddVacation.class);
         startActivity(addVacation);
+    }
+
+    @Override
+    protected void onResume() {
+
+        super.onResume();
+        RecyclerView vacationRV = findViewById(R.id.vacationRV);
+        final VacationAdapter vacationAdapter = new VacationAdapter(this);
+        vacationRV.setAdapter(vacationAdapter);
+        vacationRV.setLayoutManager(new LinearLayoutManager(this));
+        repo = new Repository(getApplication());
+        List<Vacation> allVacations = repo.getAllVacations();
+        vacationAdapter.setVacations(allVacations);
+        Toast.makeText(VacationDashboard.this, "List refreshed", Toast.LENGTH_LONG).show();
     }
 }
 

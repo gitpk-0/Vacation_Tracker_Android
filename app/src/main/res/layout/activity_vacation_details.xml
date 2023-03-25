@@ -46,7 +46,7 @@
 
                 <EditText
                     android:id="@+id/vacationTitle"
-                    android:layout_width="201dp"
+                    android:layout_width="280dp"
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
                     android:textSize="25sp"
@@ -108,51 +108,18 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <!--                <TextView-->
-                <!--                    android:layout_width="165dp"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:text="End Date"-->
-                <!--                    android:textColor="#000000"-->
-                <!--                    android:textSize="25sp" />-->
-
-                <!--                <Button-->
-                <!--                    android:id="@+id/endDatePickerBtn"-->
-                <!--                    android:layout_width="200dp"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:rotationX="0"-->
-                <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
-                <!--                    app:layout_constraintLeft_toLeftOf="parent"-->
-                <!--                    tools:layout_editor_absoluteX="164dp"-->
-                <!--                    tools:layout_editor_absoluteY="186dp" />-->
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <!--                <TextView-->
-                    <!--                    android:layout_width="165dp"-->
-                    <!--                    android:layout_height="wrap_content"-->
-                    <!--                    android:text="End Date"-->
-                    <!--                    android:textColor="#000000"-->
-                    <!--                    android:textSize="25sp" />-->
-
-                    <!--                <Button-->
-                    <!--                    android:id="@+id/endDatePickerBtn"-->
-                    <!--                    android:layout_width="200dp"-->
-                    <!--                    android:layout_height="wrap_content"-->
-                    <!--                    android:rotationX="0"-->
-                    <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
-                    <!--                    app:layout_constraintLeft_toLeftOf="parent"-->
-                    <!--                    tools:layout_editor_absoluteX="164dp"-->
-                    <!--                    tools:layout_editor_absoluteY="186dp" />-->
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent">
 
                     <Button
                         android:id="@+id/startDatePickerBtn"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="#6E558B2F"
+                        android:backgroundTint="#80CBC4"
                         android:textAlignment="center"
                         android:textSize="25sp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -169,28 +136,11 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <!--                <TextView-->
-                <!--                    android:layout_width="165dp"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:text="End Date"-->
-                <!--                    android:textColor="#000000"-->
-                <!--                    android:textSize="25sp" />-->
-
-                <!--                <Button-->
-                <!--                    android:id="@+id/endDatePickerBtn"-->
-                <!--                    android:layout_width="200dp"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:rotationX="0"-->
-                <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
-                <!--                    app:layout_constraintLeft_toLeftOf="parent"-->
-                <!--                    tools:layout_editor_absoluteX="164dp"-->
-                <!--                    tools:layout_editor_absoluteY="186dp" />-->
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="End Date"
+                    android:text="@string/end_date"
                     android:textColor="#000000"
                     android:textSize="30sp"
                     android:textStyle="bold" />
@@ -207,11 +157,12 @@
                     android:id="@+id/endDatePickerBtn"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="#63EF6C00"
+                    android:backgroundTint="#B39DDB"
                     android:rotationX="0"
                     android:textSize="25sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
+                    app:rippleColor="#7B1FA2"
                     tools:layout_editor_absoluteX="164dp"
                     tools:layout_editor_absoluteY="186dp" />
             </LinearLayout>
@@ -221,7 +172,7 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/viewExcursionsBtn"
+        android:id="@+id/addExcursionsBtn"
         android:layout_width="320dp"
         android:layout_height="66dp"
         android:layout_marginTop="12dp"
@@ -240,11 +191,11 @@
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/teal_700"
         android:onClick="onSave"
-        android:text="SAVE VACATION"
+        android:text="@string/save_vacation"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewExcursionsBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/addExcursionsBtn" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

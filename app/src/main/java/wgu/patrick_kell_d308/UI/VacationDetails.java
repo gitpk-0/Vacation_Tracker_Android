@@ -60,7 +60,6 @@ public class VacationDetails extends AppCompatActivity {
         startDatePickerBtn = findViewById(R.id.startDatePickerBtn);
         endDatePickerBtn = findViewById(R.id.endDatePickerBtn);
 
-
         title = getIntent().getStringExtra("title");
         lodging = getIntent().getStringExtra("lodging type");
         startDate = getIntent().getStringExtra("start date");
@@ -70,9 +69,6 @@ public class VacationDetails extends AppCompatActivity {
         lodgingType.setText(lodging);
         startDatePickerBtn.setText(startDate);
         endDatePickerBtn.setText(endDate);
-
-        startDatePickerBtn = findViewById(R.id.startDatePickerBtn);
-        endDatePickerBtn = findViewById(R.id.endDatePickerBtn);
 
         startDatePickerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,7 +102,6 @@ public class VacationDetails extends AppCompatActivity {
         endDatePickerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                System.out.println("End date clicked method called");
                 String dateSelection = endDatePickerBtn.getText().toString();
                 try {
                     calendar.setTime(sdf.parse(dateSelection));
@@ -155,7 +150,7 @@ public class VacationDetails extends AppCompatActivity {
         }
 
 
-        Intent backToDashboard = new Intent(VacationDetails.this, Dashboard.class);
+        Intent backToDashboard = new Intent(VacationDetails.this, VacationDashboard.class);
         startActivity(backToDashboard);
     }
 
@@ -174,10 +169,5 @@ public class VacationDetails extends AppCompatActivity {
     }
 
 
-    @Override
-    protected void onResume() {
 
-        super.onResume();
-        Toast.makeText(VacationDetails.this, "refresh list", Toast.LENGTH_LONG).show();
-    }
 }
