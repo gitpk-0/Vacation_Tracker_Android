@@ -45,7 +45,7 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/vacationTitle"
+                    android:id="@+id/excursionTitle"
                     android:layout_width="280dp"
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
@@ -116,7 +116,7 @@
                     tools:ignore="UselessParent">
 
                     <Button
-                        android:id="@+id/startDatePickerBtn"
+                        android:id="@+id/excursionDatePickerBtn"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#80CBC4"
@@ -185,7 +185,7 @@
         app:layout_constraintTop_toBottomOf="@+id/scrollview" />
 
     <Button
-        android:id="@+id/saveVacationBtn"
+        android:id="@+id/saveExcursionBtn"
         android:layout_width="218dp"
         android:layout_height="61dp"
         android:layout_marginTop="20dp"

@@ -52,9 +52,9 @@ public class VacationDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vacation_details);
 
-        vacationTitle = findViewById(R.id.vacationTitle);
+        vacationTitle = findViewById(R.id.excursionTitle);
         lodgingType = findViewById(R.id.lodgingType);
-        startDatePickerBtn = findViewById(R.id.startDatePickerBtn);
+        startDatePickerBtn = findViewById(R.id.excursionDatePickerBtn);
         endDatePickerBtn = findViewById(R.id.endDatePickerBtn);
 
         title = getIntent().getStringExtra("title");

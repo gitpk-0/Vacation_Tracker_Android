@@ -19,4 +19,7 @@
     <string name="add_excursions_for_this_vacation">Add Excursions for this Vacation</string>
     <string name="save_vacation">SAVE VACATION</string>
     <string name="end_date">End Date</string>
+    <string name="save_excursion">SAVE EXCURSION</string>
+    <string name="excursion_title">Excursion Title</string>
+    <string name="excursion_date">Excursion Date</string>
 </resources>

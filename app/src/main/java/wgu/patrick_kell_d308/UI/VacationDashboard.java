@@ -22,7 +22,7 @@ public class VacationDashboard extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashboard);
+        setContentView(R.layout.activity_vacation_dashboard);
 
         RecyclerView vacationRV = findViewById(R.id.vacationRV);
         final VacationAdapter vacationAdapter = new VacationAdapter(this);
@@ -53,13 +53,3 @@ public class VacationDashboard extends AppCompatActivity {
         Toast.makeText(VacationDashboard.this, "List refreshed", Toast.LENGTH_LONG).show();
     }
 }
-
-
-/*
-* Vacation = Product
-* Excursion = Part
-*
-* Dashboard = ProductList
-* VacationDetails = ProductDetails
-* ExcursionDetails = PartDetails
-* */

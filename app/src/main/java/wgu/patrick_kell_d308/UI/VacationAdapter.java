@@ -21,6 +21,9 @@ import wgu.patrick_kell_d308.R;
  */
 public class VacationAdapter extends RecyclerView.Adapter<VacationAdapter.VacationViewHolder> {
 
+    private List<Vacation> mVacations;
+    private final Context context;
+    private final LayoutInflater mInflater; // opens a layout
 
     class VacationViewHolder extends RecyclerView.ViewHolder {
         private final Button vacationItemView;
@@ -47,9 +50,6 @@ public class VacationAdapter extends RecyclerView.Adapter<VacationAdapter.Vacati
         }
     }
 
-    private List<Vacation> mVacations;
-    private final Context context;
-    private final LayoutInflater mInflater; // opens a layout
 
     // adapter constructor
     public VacationAdapter(Context context) {
