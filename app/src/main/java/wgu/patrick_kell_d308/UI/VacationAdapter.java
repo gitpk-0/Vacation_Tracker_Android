@@ -5,8 +5,8 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -23,13 +23,13 @@ public class VacationAdapter extends RecyclerView.Adapter<VacationAdapter.Vacati
 
 
     class VacationViewHolder extends RecyclerView.ViewHolder {
-        private final TextView vacationItemView;
+        private final Button vacationItemView;
 
         // view holder constructor
         public VacationViewHolder(View itemView) {
             super(itemView);
-            vacationItemView = itemView.findViewById(R.id.textView);
-            itemView.setOnClickListener(new View.OnClickListener() {
+            vacationItemView = itemView.findViewById(R.id.vacationItem);
+            vacationItemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     int position = getAdapterPosition();

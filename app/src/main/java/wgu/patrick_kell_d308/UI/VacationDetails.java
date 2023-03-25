@@ -16,7 +16,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.Locale;
 
 import wgu.patrick_kell_d308.Database.Repository;
@@ -38,13 +37,11 @@ public class VacationDetails extends AppCompatActivity {
 
     Button startDatePickerBtn;
     Button endDatePickerBtn;
-    Button saveVacationBtn;
 
     Repository repo = new Repository(getApplication());
 
     String dateFormat = "MM/dd/yyyy";
     SimpleDateFormat sdf = new SimpleDateFormat(dateFormat, Locale.US);
-    String currentDate = sdf.format(new Date());
     final Calendar calendar = Calendar.getInstance();
     DatePickerDialog.OnDateSetListener startDateListener;
     DatePickerDialog.OnDateSetListener endDateListener;

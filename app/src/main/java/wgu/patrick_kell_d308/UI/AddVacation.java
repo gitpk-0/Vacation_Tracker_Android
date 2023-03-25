@@ -32,7 +32,6 @@ public class AddVacation extends AppCompatActivity {
 
     Button startDatePickerBtn;
     Button endDatePickerBtn;
-    Button saveVacationBtn;
 
     Repository repo = new Repository(getApplication());
 
