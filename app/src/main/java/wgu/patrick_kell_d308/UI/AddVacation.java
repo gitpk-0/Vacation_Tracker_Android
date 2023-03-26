@@ -47,9 +47,9 @@ public class AddVacation extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_vacation);
 
-        vacationTitle = findViewById(R.id.excursionTitle);
+        vacationTitle = findViewById(R.id.vacationTitle);
         lodgingType = findViewById(R.id.lodgingType);
-        startDatePickerBtn = findViewById(R.id.excursionDatePickerBtn);
+        startDatePickerBtn = findViewById(R.id.startDatePickerBtn);
         endDatePickerBtn = findViewById(R.id.endDatePickerBtn);
 
         startDatePickerBtn.setText(currentDate);

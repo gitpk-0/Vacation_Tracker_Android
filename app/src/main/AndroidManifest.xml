@@ -14,7 +14,7 @@
         <activity
             android:name=".UI.AddExcursion"
             android:label="Add a new Excursion"
-            android:parentActivityName=".UI.AddVacation"
+            android:parentActivityName=".UI.ExcursionDashboard"
             android:exported="false" />
         <activity
             android:name=".UI.VacationDetails"
@@ -24,7 +24,7 @@
         <activity
             android:name=".UI.ExcursionDetails"
             android:label="Excursion Details"
-            android:parentActivityName=".UI.VacationDetails"
+            android:parentActivityName=".UI.ExcursionDashboard"
             android:exported="false" />
         <activity
             android:name=".UI.AddVacation"
@@ -36,6 +36,11 @@
             android:exported="false"
             android:label="My Vacation Dashboard"
             android:parentActivityName=".UI.MainActivity" />
+        <activity
+            android:name=".UI.ExcursionDashboard"
+            android:exported="false"
+            android:label="Excursion Dashboard"
+            android:parentActivityName=".UI.VacationDetails" />
         <activity
             android:name=".UI.MainActivity"
             android:exported="true">

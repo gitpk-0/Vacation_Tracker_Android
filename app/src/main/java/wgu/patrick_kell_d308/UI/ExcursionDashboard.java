@@ -21,6 +21,9 @@ public class ExcursionDashboard extends AppCompatActivity {
 
     private Repository repo;
 
+    Intent fromVacationDetails;
+    int associatedVacationID;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,12 +34,16 @@ public class ExcursionDashboard extends AppCompatActivity {
         excursionRV.setAdapter(excursionAdapter);
         excursionRV.setLayoutManager(new LinearLayoutManager(this));
         repo = new Repository(getApplication());
-        List<Excursion> allExcursions = repo.getAllExcursions();
-        excursionAdapter.setExcursions(allExcursions);
+        fromVacationDetails = getIntent();
+        associatedVacationID = Integer.parseInt(fromVacationDetails.getStringExtra("id"));
+        List<Excursion> excursionsByVacaId = repo.getExcursionsByVacaId(associatedVacationID);
+        excursionAdapter.setExcursions(excursionsByVacaId);
     }
 
     public void launchAddExcursion(View view) {
         Intent addExcursion = new Intent(ExcursionDashboard.this, AddExcursion.class);
+        String associatedVacationID = fromVacationDetails.getStringExtra("id");
+        addExcursion.putExtra("id", associatedVacationID);
         startActivity(addExcursion);
     }
 
@@ -49,8 +56,10 @@ public class ExcursionDashboard extends AppCompatActivity {
         excursionRV.setAdapter(excursionAdapter);
         excursionRV.setLayoutManager(new LinearLayoutManager(this));
         repo = new Repository(getApplication());
-        List<Excursion> allExcursions = repo.getAllExcursions();
-        excursionAdapter.setExcursions(allExcursions);
+        fromVacationDetails = getIntent();
+        associatedVacationID = Integer.parseInt(fromVacationDetails.getStringExtra("id"));
+        List<Excursion> excursionsByVacaId = repo.getExcursionsByVacaId(associatedVacationID);
+        excursionAdapter.setExcursions(excursionsByVacaId);
     }
 }
 

@@ -88,6 +88,20 @@ public class Repository {
         return mAllExcursions;
     }
 
+    public List<Excursion> getExcursionsByVacaId(int id) {
+        databaseExecutor.execute(() -> {
+            mAllExcursions = mExcursionDAO.getExcursionsByVacaId(id);
+        });
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return mAllExcursions;
+    }
+
+
+
     public void insert(Excursion excursion) {
         databaseExecutor.execute(() -> {
             mExcursionDAO.insert(excursion);

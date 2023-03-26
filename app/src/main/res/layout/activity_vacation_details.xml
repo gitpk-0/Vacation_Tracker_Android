@@ -45,7 +45,7 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/excursionTitle"
+                    android:id="@+id/vacationTitle"
                     android:layout_width="280dp"
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
@@ -116,7 +116,7 @@
                     tools:ignore="UselessParent">
 
                     <Button
-                        android:id="@+id/excursionDatePickerBtn"
+                        android:id="@+id/startDatePickerBtn"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#80CBC4"
@@ -172,11 +172,12 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/addExcursionsBtn"
+        android:id="@+id/viewExcursionsBtn"
         android:layout_width="320dp"
         android:layout_height="66dp"
         android:layout_marginTop="12dp"
         android:backgroundTint="@color/purple_500"
+        android:onClick="launchExcursionDashboard"
         android:text="@string/view_excursions_for_this_vacation"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -185,7 +186,7 @@
         app:layout_constraintTop_toBottomOf="@+id/scrollview" />
 
     <Button
-        android:id="@+id/saveExcursionBtn"
+        android:id="@+id/saveVacationBtn"
         android:layout_width="218dp"
         android:layout_height="61dp"
         android:layout_marginTop="20dp"
@@ -195,7 +196,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addExcursionsBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/viewExcursionsBtn" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

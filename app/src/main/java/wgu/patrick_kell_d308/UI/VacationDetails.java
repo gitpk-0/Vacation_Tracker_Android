@@ -52,11 +52,12 @@ public class VacationDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vacation_details);
 
-        vacationTitle = findViewById(R.id.excursionTitle);
+        vacationTitle = findViewById(R.id.vacationTitle);
         lodgingType = findViewById(R.id.lodgingType);
-        startDatePickerBtn = findViewById(R.id.excursionDatePickerBtn);
+        startDatePickerBtn = findViewById(R.id.startDatePickerBtn);
         endDatePickerBtn = findViewById(R.id.endDatePickerBtn);
 
+        id = getIntent().getIntExtra("id", -1);
         title = getIntent().getStringExtra("title");
         lodging = getIntent().getStringExtra("lodging type");
         startDate = getIntent().getStringExtra("start date");
@@ -149,6 +150,12 @@ public class VacationDetails extends AppCompatActivity {
 
         Intent backToDashboard = new Intent(VacationDetails.this, VacationDashboard.class);
         startActivity(backToDashboard);
+    }
+
+    public void launchExcursionDashboard(View view) {
+        Intent excursionDashboard = new Intent(VacationDetails.this, ExcursionDashboard.class);
+        excursionDashboard.putExtra("id", String.valueOf(this.id));
+        startActivity(excursionDashboard);
     }
 
 
