@@ -84,6 +84,8 @@ public class VacationDetails extends AppCompatActivity {
             }
         });
 
+
+
         startDateListener = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
@@ -120,7 +122,6 @@ public class VacationDetails extends AppCompatActivity {
                 calendar.set(Calendar.YEAR, year);
                 calendar.set(Calendar.MONTH, monthOfYear);
                 calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-
                 updateLabel(endDatePickerBtn);
             }
         };

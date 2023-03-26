@@ -50,10 +50,7 @@ public class AddExcursion extends AppCompatActivity {
         setContentView(R.layout.activity_excursion_details);
 
         fromVacationDetails = getIntent();
-        System.out.println("good to here");
-        System.out.println(fromVacationDetails.getStringExtra("id"));
         associatedVacationID = Integer.parseInt(fromVacationDetails.getStringExtra("id"));
-        System.out.println("good to here 2");
 
         excursionTitle = findViewById(R.id.excursionTitle);
         excursionDatePickerBtn = findViewById(R.id.excursionDatePickerBtn);
@@ -105,6 +102,8 @@ public class AddExcursion extends AppCompatActivity {
 
 
         Intent backToExcursionDashboard = new Intent(AddExcursion.this, ExcursionDashboard.class);
+        String associatedVacationID = fromVacationDetails.getStringExtra("id");
+        backToExcursionDashboard.putExtra("id", associatedVacationID);
         startActivity(backToExcursionDashboard);
     }
 }

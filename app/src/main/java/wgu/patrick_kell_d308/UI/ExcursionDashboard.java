@@ -38,6 +38,8 @@ public class ExcursionDashboard extends AppCompatActivity {
         associatedVacationID = Integer.parseInt(fromVacationDetails.getStringExtra("id"));
         List<Excursion> excursionsByVacaId = repo.getExcursionsByVacaId(associatedVacationID);
         excursionAdapter.setExcursions(excursionsByVacaId);
+
+
     }
 
     public void launchAddExcursion(View view) {
