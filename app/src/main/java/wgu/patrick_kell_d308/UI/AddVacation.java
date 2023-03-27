@@ -121,7 +121,7 @@ public class AddVacation extends AppCompatActivity {
             Toast.makeText(this, "Vacation Updated", Toast.LENGTH_LONG).show();
         }
 
-        Intent backToDashboard = new Intent(AddVacation.this, VacationDashboard.class);
+        Intent backToDashboard = new Intent(AddVacation.this, DashboardVacation.class);
         startActivity(backToDashboard);
     }
 }
