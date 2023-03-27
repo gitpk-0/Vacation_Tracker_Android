@@ -175,7 +175,4 @@ public class VacationDetails extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
-
-
 }
