@@ -161,7 +161,7 @@ public class VacationDetails extends AppCompatActivity {
 
 
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_vacation_details, menu);
         return true;
     }
 
@@ -172,6 +172,9 @@ public class VacationDetails extends AppCompatActivity {
 
             case R.id.deleteVacation:
                 System.out.println("delete vacation");
+
+            case R.id.shareVacation:
+                System.out.println("share vacation");
         }
         return super.onOptionsItemSelected(item);
     }
