@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="Delete Vacation"
-        android:id="@+id/deleteVacation"/>
+    <item
+        android:id="@+id/shareVacation"
+        android:title="@string/share_vacation" />
 
-    <item android:title="Share Vacation"
-        android:id="@+id/shareVacation"/>
+    <item
+        android:id="@+id/notifyStart"
+        android:title="@string/notify_start" />
+
+    <item
+        android:id="@+id/notifyEnd"
+        android:title="@string/notify_end" />
+
+    <item
+        android:id="@+id/deleteVacation"
+        android:title="@string/delete_vacation" />
 </menu>

@@ -85,7 +85,6 @@ public class VacationDetails extends AppCompatActivity {
         });
 
 
-
         startDateListener = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
@@ -169,12 +168,30 @@ public class VacationDetails extends AppCompatActivity {
         switch (item.getItemId()) {
             case android.R.id.home:
                 this.finish();
-
-            case R.id.deleteVacation:
-                System.out.println("delete vacation");
+                return true;
 
             case R.id.shareVacation:
                 System.out.println("share vacation");
+
+                Intent sendVacation = new Intent();
+                sendVacation.setAction(Intent.ACTION_SEND);
+                String vacationDetails = "Vacation: " + vacationTitle.getText().toString() +
+                        "\nLodging: " + lodgingType.getText().toString() +
+                        "\nStart Date: " + startDatePickerBtn.getText().toString() +
+                        "\nEnd Date: " + endDatePickerBtn.getText().toString();
+
+                sendVacation.putExtra(Intent.EXTRA_TEXT, vacationDetails);
+                sendVacation.putExtra(Intent.EXTRA_TITLE, vacationTitle.getText().toString());
+                sendVacation.setType("text/plain");
+                Intent shareVacation = Intent.createChooser(sendVacation, null);
+                startActivity(shareVacation);
+                return true;
+
+            case R.id.deleteVacation:
+                System.out.println("delete vacation");
+                return true;
+
+
         }
         return super.onOptionsItemSelected(item);
     }

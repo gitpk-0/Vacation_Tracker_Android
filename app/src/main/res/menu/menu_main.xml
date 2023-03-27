@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="Add Sample Data"
-        android:id="@+id/addSampleData"/>
+    <item
+        android:id="@+id/addSampleData"
+        android:title="@string/add_sample_data" />
 
-    <item android:title="Remove Sample Data"
-        android:id="@+id/removeSampleData"/>
+    <item
+        android:id="@+id/removeSampleData"
+        android:title="@string/remove_sample_data" />
 
 </menu>
