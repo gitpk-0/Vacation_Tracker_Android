@@ -169,6 +169,9 @@ public class VacationDetails extends AppCompatActivity {
         switch (item.getItemId()) {
             case android.R.id.home:
                 this.finish();
+
+            case R.id.deleteVacation:
+                System.out.println("delete vacation");
         }
         return super.onOptionsItemSelected(item);
     }
