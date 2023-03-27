@@ -25,7 +25,7 @@ import wgu.patrick_kell_d308.R;
 /**
  * @author Patrick Kell
  */
-public class DetailsVacation extends AppCompatActivity {
+public class VacationDetails extends AppCompatActivity {
 
     EditText vacationTitle;
     EditText lodgingType;
@@ -78,7 +78,7 @@ public class DetailsVacation extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
-                new DatePickerDialog(DetailsVacation.this, startDateListener,
+                new DatePickerDialog(VacationDetails.this, startDateListener,
                         calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
                         calendar.get(Calendar.DAY_OF_MONTH)).show();
             }
@@ -109,7 +109,7 @@ public class DetailsVacation extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
-                new DatePickerDialog(DetailsVacation.this, endDateListener,
+                new DatePickerDialog(VacationDetails.this, endDateListener,
                         calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
                         calendar.get(Calendar.DAY_OF_MONTH)).show();
             }
@@ -149,12 +149,12 @@ public class DetailsVacation extends AppCompatActivity {
         }
 
 
-        Intent backToDashboard = new Intent(DetailsVacation.this, DashboardVacation.class);
+        Intent backToDashboard = new Intent(VacationDetails.this, VacationDashboard.class);
         startActivity(backToDashboard);
     }
 
     public void launchExcursionDashboard(View view) {
-        Intent excursionDashboard = new Intent(DetailsVacation.this, DashboardExcursion.class);
+        Intent excursionDashboard = new Intent(VacationDetails.this, ExcursionDashboard.class);
         excursionDashboard.putExtra("id", String.valueOf(this.id));
         startActivity(excursionDashboard);
     }

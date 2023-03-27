@@ -101,7 +101,7 @@ public class AddExcursion extends AppCompatActivity {
         }
 
 
-        Intent backToExcursionDashboard = new Intent(AddExcursion.this, DashboardExcursion.class);
+        Intent backToExcursionDashboard = new Intent(AddExcursion.this, ExcursionDashboard.class);
         String associatedVacationID = fromVacationDetails.getStringExtra("id");
         backToExcursionDashboard.putExtra("id", associatedVacationID);
         startActivity(backToExcursionDashboard);
