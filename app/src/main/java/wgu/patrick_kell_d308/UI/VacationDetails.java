@@ -1,6 +1,9 @@
 package wgu.patrick_kell_d308.UI;
 
+import android.app.AlarmManager;
 import android.app.DatePickerDialog;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -16,11 +19,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
 
 import wgu.patrick_kell_d308.Database.Repository;
 import wgu.patrick_kell_d308.Entities.Vacation;
 import wgu.patrick_kell_d308.R;
+import wgu.patrick_kell_d308.Receiver.DateReceiver;
 
 /**
  * @author Patrick Kell
@@ -165,14 +170,15 @@ public class VacationDetails extends AppCompatActivity {
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
+
+        String dateFormat = "MM/dd/yyyy";
+        SimpleDateFormat sdf = new SimpleDateFormat(dateFormat, Locale.US);
         switch (item.getItemId()) {
             case android.R.id.home:
                 this.finish();
                 return true;
 
             case R.id.shareVacation:
-                System.out.println("share vacation");
-
                 Intent sendVacation = new Intent();
                 sendVacation.setAction(Intent.ACTION_SEND);
                 String vacationDetails = "Vacation: " + vacationTitle.getText().toString() +
@@ -187,8 +193,43 @@ public class VacationDetails extends AppCompatActivity {
                 startActivity(shareVacation);
                 return true;
 
+            case R.id.notifyStart:
+                String startDateString = startDatePickerBtn.getText().toString();
+                Date startDate = null;
+                try {
+                    startDate = sdf.parse(startDateString);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+
+                Long startTrigger = startDate.getTime();
+                Intent toDateReceiverStart = new Intent(VacationDetails.this, DateReceiver.class);
+                toDateReceiverStart.putExtra("key", vacationTitle.getText().toString() + " vacation starts today");
+                PendingIntent startSender = PendingIntent.getBroadcast(VacationDetails.this,
+                        ++MainActivity.numAlert, toDateReceiverStart, PendingIntent.FLAG_IMMUTABLE);
+                AlarmManager startAlarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+                startAlarmManager.set(AlarmManager.RTC_WAKEUP, startTrigger, startSender);
+                return true;
+
+            case R.id.notifyEnd:
+                String endDateString = endDatePickerBtn.getText().toString();
+                Date endDate = null;
+                try {
+                    endDate = sdf.parse(endDateString);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+
+                Long endTrigger = endDate.getTime();
+                Intent toDateReceiverEnd = new Intent(VacationDetails.this, DateReceiver.class);
+                toDateReceiverEnd.putExtra("key", vacationTitle.getText().toString() + " vacation ends today");
+                PendingIntent endSender = PendingIntent.getBroadcast(VacationDetails.this,
+                        ++MainActivity.numAlert, toDateReceiverEnd, PendingIntent.FLAG_IMMUTABLE);
+                AlarmManager endAlarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+                endAlarmManager.set(AlarmManager.RTC_WAKEUP, endTrigger, endSender);
+                return true;
+
             case R.id.deleteVacation:
-                System.out.println("delete vacation");
                 return true;
 
 

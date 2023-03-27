@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">VacayMate Vacation Tracker</string>
     <string name="welcome">Organize and Track all of your Vacations</string>
@@ -24,7 +23,12 @@
     <string name="excursion_title">Excursion Title</string>
     <string name="excursion_date">Excursion Date</string>
     <string name="delete_excursion">Delete Excursion</string>
+    <string name="notify_start">Notify Start</string>
+    <string name="delete_vacation">Delete Vacation</string>
+    <string name="share_vacation">Share Vacation</string>
     <string name="notify_end">Notify End</string>
     <string name="add_sample_data">Add Sample Data</string>
     <string name="remove_sample_data">Remove Sample Data</string>
+    <string name="channel_name">date_channel</string>
+    <string name="channel_description" />
 </resources>
