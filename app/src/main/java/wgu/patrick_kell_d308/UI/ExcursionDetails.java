@@ -119,6 +119,10 @@ public class ExcursionDetails extends AppCompatActivity {
         switch (item.getItemId()) {
             case android.R.id.home:
                 this.finish();
+
+            case R.id.deleteExcursion:
+                System.out.println("delete excursion");
+
         }
         return super.onOptionsItemSelected(item);
     }

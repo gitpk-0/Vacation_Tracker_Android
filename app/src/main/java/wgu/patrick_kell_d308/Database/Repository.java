@@ -36,7 +36,7 @@ public class Repository {
             mAllVacations = mVacationDAO.getAllVacations();
         });
         try {
-            Thread.sleep(1000);
+            Thread.sleep(10);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -48,7 +48,7 @@ public class Repository {
             mVacationDAO.insert(vacation);
         });
         try {
-            Thread.sleep(1000);
+            Thread.sleep(10);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -59,7 +59,7 @@ public class Repository {
             mVacationDAO.update(vacation);
         });
         try {
-            Thread.sleep(1000);
+            Thread.sleep(10);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -70,7 +70,7 @@ public class Repository {
             mVacationDAO.delete(vacation);
         });
         try {
-            Thread.sleep(1000);
+            Thread.sleep(10);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -81,7 +81,7 @@ public class Repository {
             mAllExcursions = mExcursionDAO.getAllExcursions();
         });
         try {
-            Thread.sleep(1000);
+            Thread.sleep(10);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -93,7 +93,7 @@ public class Repository {
             mAllExcursions = mExcursionDAO.getExcursionsByVacaId(id);
         });
         try {
-            Thread.sleep(1000);
+            Thread.sleep(10);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -107,7 +107,7 @@ public class Repository {
             mExcursionDAO.insert(excursion);
         });
         try {
-            Thread.sleep(1000);
+            Thread.sleep(10);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -118,7 +118,7 @@ public class Repository {
             mExcursionDAO.update(excursion);
         });
         try {
-            Thread.sleep(1000);
+            Thread.sleep(10);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -129,7 +129,7 @@ public class Repository {
             mExcursionDAO.delete(excursion);
         });
         try {
-            Thread.sleep(1000);
+            Thread.sleep(10);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

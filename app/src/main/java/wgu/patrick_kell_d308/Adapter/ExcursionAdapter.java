@@ -1,4 +1,4 @@
-package wgu.patrick_kell_d308.UI;
+package wgu.patrick_kell_d308.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,6 +14,7 @@ import java.util.List;
 
 import wgu.patrick_kell_d308.Entities.Excursion;
 import wgu.patrick_kell_d308.R;
+import wgu.patrick_kell_d308.UI.ExcursionDetails;
 
 /**
  * @author Patrick Kell

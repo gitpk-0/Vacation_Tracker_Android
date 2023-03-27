@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import wgu.patrick_kell_d308.Adapter.ExcursionAdapter;
 import wgu.patrick_kell_d308.Database.Repository;
 import wgu.patrick_kell_d308.Entities.Excursion;
 import wgu.patrick_kell_d308.R;

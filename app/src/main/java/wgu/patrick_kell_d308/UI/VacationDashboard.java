@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import wgu.patrick_kell_d308.Adapter.VacationAdapter;
 import wgu.patrick_kell_d308.Database.Repository;
 import wgu.patrick_kell_d308.Entities.Vacation;
 import wgu.patrick_kell_d308.R;
