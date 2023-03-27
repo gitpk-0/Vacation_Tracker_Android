@@ -76,7 +76,6 @@ public class AddVacation extends AppCompatActivity {
             }
         };
 
-
         endDatePickerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
