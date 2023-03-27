@@ -16,7 +16,7 @@ import wgu.patrick_kell_d308.Database.Repository;
 import wgu.patrick_kell_d308.Entities.Vacation;
 import wgu.patrick_kell_d308.R;
 
-public class VacationDashboard extends AppCompatActivity {
+public class DashboardVacation extends AppCompatActivity {
 
     private Repository repo;
 
@@ -36,7 +36,7 @@ public class VacationDashboard extends AppCompatActivity {
     }
 
     public void launchAddVacation(View view) {
-        Intent addVacation = new Intent(VacationDashboard.this, AddVacation.class);
+        Intent addVacation = new Intent(DashboardVacation.this, AddVacation.class);
         startActivity(addVacation);
     }
 
@@ -51,6 +51,6 @@ public class VacationDashboard extends AppCompatActivity {
         repo = new Repository(getApplication());
         List<Vacation> allVacations = repo.getAllVacations();
         vacationAdapter.setVacations(allVacations);
-        Toast.makeText(VacationDashboard.this, "List refreshed", Toast.LENGTH_LONG).show();
+        Toast.makeText(DashboardVacation.this, "List refreshed", Toast.LENGTH_LONG).show();
     }
 }

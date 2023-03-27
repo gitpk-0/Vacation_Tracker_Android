@@ -25,7 +25,7 @@ import wgu.patrick_kell_d308.R;
 /**
  * @author Patrick Kell
  */
-public class ExcursionDetails extends AppCompatActivity {
+public class DetailsExcursion extends AppCompatActivity {
 
     EditText excursionTitle;
     String title;
@@ -65,7 +65,7 @@ public class ExcursionDetails extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
-                new DatePickerDialog(ExcursionDetails.this, dateListener,
+                new DatePickerDialog(DetailsExcursion.this, dateListener,
                         calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
                         calendar.get(Calendar.DAY_OF_MONTH)).show();
             }
@@ -106,7 +106,7 @@ public class ExcursionDetails extends AppCompatActivity {
         }
 
 
-        Intent backToExcursionDashboard = new Intent(ExcursionDetails.this, ExcursionDashboard.class);
+        Intent backToExcursionDashboard = new Intent(DetailsExcursion.this, DashboardExcursion.class);
         startActivity(backToExcursionDashboard);
     }
 

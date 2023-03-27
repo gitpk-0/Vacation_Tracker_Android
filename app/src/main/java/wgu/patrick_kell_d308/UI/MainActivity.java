@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void launchDashboard(View view) {
 
-        Intent dashboard = new Intent(MainActivity.this, VacationDashboard.class);
+        Intent dashboard = new Intent(MainActivity.this, DashboardVacation.class);
         startActivity(dashboard);
     }
 }

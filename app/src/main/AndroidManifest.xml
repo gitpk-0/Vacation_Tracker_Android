@@ -14,34 +14,34 @@
         <activity
             android:name=".UI.AddExcursion"
             android:label="Add a new Excursion"
-            android:parentActivityName=".UI.ExcursionDashboard"
+            android:parentActivityName=".UI.DashboardExcursion"
             android:exported="false" />
         <activity
-            android:name=".UI.VacationDetails"
+            android:name=".UI.DetailsVacation"
             android:label="Vacation Details"
-            android:parentActivityName=".UI.VacationDashboard"
+            android:parentActivityName=".UI.DashboardVacation"
             android:launchMode="singleTop"
             android:exported="false" />
         <activity
-            android:name=".UI.ExcursionDetails"
+            android:name=".UI.DetailsExcursion"
             android:label="Excursion Details"
-            android:parentActivityName=".UI.ExcursionDashboard"
+            android:parentActivityName=".UI.DashboardExcursion"
             android:exported="false" />
         <activity
             android:name=".UI.AddVacation"
             android:label="Add a new Vacation"
-            android:parentActivityName=".UI.VacationDashboard"
+            android:parentActivityName=".UI.DashboardVacation"
             android:exported="false" />
         <activity
-            android:name=".UI.VacationDashboard"
+            android:name=".UI.DashboardVacation"
             android:exported="false"
             android:label="My Vacation Dashboard"
             android:parentActivityName=".UI.MainActivity" />
         <activity
-            android:name=".UI.ExcursionDashboard"
+            android:name=".UI.DashboardExcursion"
             android:exported="false"
             android:label="Excursion Dashboard"
-            android:parentActivityName=".UI.VacationDetails" />
+            android:parentActivityName=".UI.DetailsVacation" />
         <activity
             android:name=".UI.MainActivity"
             android:exported="true">

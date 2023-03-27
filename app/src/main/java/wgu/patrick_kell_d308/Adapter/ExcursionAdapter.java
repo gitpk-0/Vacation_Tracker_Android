@@ -14,7 +14,7 @@ import java.util.List;
 
 import wgu.patrick_kell_d308.Entities.Excursion;
 import wgu.patrick_kell_d308.R;
-import wgu.patrick_kell_d308.UI.ExcursionDetails;
+import wgu.patrick_kell_d308.UI.DetailsExcursion;
 
 /**
  * @author Patrick Kell
@@ -39,7 +39,7 @@ public class ExcursionAdapter extends RecyclerView.Adapter<ExcursionAdapter.Excu
                     int position = getAdapterPosition();
                     final Excursion current = mExcursions.get(position);
 
-                    Intent excursionDetails = new Intent(context, ExcursionDetails.class);
+                    Intent excursionDetails = new Intent(context, DetailsExcursion.class);
                     excursionDetails.putExtra("id", current.getExcursionID());
                     excursionDetails.putExtra("title", current.getExcursionTitle());
                     excursionDetails.putExtra("date", current.getExcursionDate());

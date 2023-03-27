@@ -15,7 +15,7 @@ import java.util.List;
 
 import wgu.patrick_kell_d308.Entities.Vacation;
 import wgu.patrick_kell_d308.R;
-import wgu.patrick_kell_d308.UI.VacationDetails;
+import wgu.patrick_kell_d308.UI.DetailsVacation;
 
 /**
  * @author Patrick Kell
@@ -39,7 +39,7 @@ public class VacationAdapter extends RecyclerView.Adapter<VacationAdapter.Vacati
                     int position = getAdapterPosition();
                     final Vacation current = mVacations.get(position);
 
-                    Intent vacationDetails = new Intent(context, VacationDetails.class);
+                    Intent vacationDetails = new Intent(context, DetailsVacation.class);
                     vacationDetails.putExtra("id", current.getVacationID());
                     vacationDetails.putExtra("title", current.getVacationTitle());
                     vacationDetails.putExtra("lodging type", current.getLodgingType());

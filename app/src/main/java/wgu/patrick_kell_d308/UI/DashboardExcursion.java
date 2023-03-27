@@ -18,7 +18,7 @@ import wgu.patrick_kell_d308.R;
 /**
  * @author Patrick Kell
  */
-public class ExcursionDashboard extends AppCompatActivity {
+public class DashboardExcursion extends AppCompatActivity {
 
     private Repository repo;
 
@@ -44,7 +44,7 @@ public class ExcursionDashboard extends AppCompatActivity {
     }
 
     public void launchAddExcursion(View view) {
-        Intent addExcursion = new Intent(ExcursionDashboard.this, AddExcursion.class);
+        Intent addExcursion = new Intent(DashboardExcursion.this, AddExcursion.class);
         String associatedVacationID = fromVacationDetails.getStringExtra("id");
         addExcursion.putExtra("id", associatedVacationID);
         startActivity(addExcursion);
