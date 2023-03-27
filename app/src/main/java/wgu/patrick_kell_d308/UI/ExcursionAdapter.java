@@ -76,6 +76,7 @@ public class ExcursionAdapter extends RecyclerView.Adapter<ExcursionAdapter.Excu
 
     @Override
     public int getItemCount() {
+        if (mExcursions == null) return 0;
         return mExcursions.size();
     }
 

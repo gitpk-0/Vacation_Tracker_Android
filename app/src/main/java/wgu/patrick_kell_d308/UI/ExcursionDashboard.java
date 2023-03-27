@@ -35,9 +35,13 @@ public class ExcursionDashboard extends AppCompatActivity {
         excursionRV.setLayoutManager(new LinearLayoutManager(this));
         repo = new Repository(getApplication());
         fromVacationDetails = getIntent();
-        associatedVacationID = Integer.parseInt(fromVacationDetails.getStringExtra("id"));
-        List<Excursion> excursionsByVacaId = repo.getExcursionsByVacaId(associatedVacationID);
-        excursionAdapter.setExcursions(excursionsByVacaId);
+        System.out.println(fromVacationDetails.toString());
+        if (fromVacationDetails.hasExtra("id")) {
+            associatedVacationID = Integer.parseInt(fromVacationDetails.getStringExtra("id"));
+            List<Excursion> excursionsByVacaId = repo.getExcursionsByVacaId(associatedVacationID);
+            excursionAdapter.setExcursions(excursionsByVacaId);
+        }
+
 
 
     }
@@ -59,9 +63,11 @@ public class ExcursionDashboard extends AppCompatActivity {
         excursionRV.setLayoutManager(new LinearLayoutManager(this));
         repo = new Repository(getApplication());
         fromVacationDetails = getIntent();
-        associatedVacationID = Integer.parseInt(fromVacationDetails.getStringExtra("id"));
-        List<Excursion> excursionsByVacaId = repo.getExcursionsByVacaId(associatedVacationID);
-        excursionAdapter.setExcursions(excursionsByVacaId);
+        if (fromVacationDetails.hasExtra("id")) {
+            associatedVacationID = Integer.parseInt(fromVacationDetails.getStringExtra("id"));
+            List<Excursion> excursionsByVacaId = repo.getExcursionsByVacaId(associatedVacationID);
+            excursionAdapter.setExcursions(excursionsByVacaId);
+        }
     }
 }
 

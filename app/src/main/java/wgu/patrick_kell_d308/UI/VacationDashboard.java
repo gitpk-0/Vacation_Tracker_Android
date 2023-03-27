@@ -3,7 +3,6 @@ package wgu.patrick_kell_d308.UI;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -50,6 +49,6 @@ public class VacationDashboard extends AppCompatActivity {
         repo = new Repository(getApplication());
         List<Vacation> allVacations = repo.getAllVacations();
         vacationAdapter.setVacations(allVacations);
-        Toast.makeText(VacationDashboard.this, "List refreshed", Toast.LENGTH_LONG).show();
+        // Toast.makeText(VacationDashboard.this, "List refreshed", Toast.LENGTH_LONG).show();
     }
 }
