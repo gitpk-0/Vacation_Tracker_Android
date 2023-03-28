@@ -28,7 +28,7 @@
     <string name="delete_vacation">Delete Vacation</string>
     <string name="share_vacation">Share Vacation</string>
     <string name="add_sample_data">Add Sample Data</string>
-    <string name="remove_sample_data">Remove Sample Data</string>
+    <string name="remove_sample_data">Delete All Data</string>
     <string name="channel_name">date_channel</string>
     <string name="channel_description">vacation_tracker_app</string>
 </resources>

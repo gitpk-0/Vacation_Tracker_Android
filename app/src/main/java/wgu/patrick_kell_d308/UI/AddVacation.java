@@ -115,7 +115,7 @@ public class AddVacation extends AppCompatActivity {
         LocalDate start = LocalDate.parse(startDate, dateFormatter);
         LocalDate end = LocalDate.parse(endDate, dateFormatter);
 
-        if (start.isBefore(end)) {
+        if (start.isBefore(end) && !title.isEmpty() && !lodging.isEmpty()) {
             if (id == -1) {
                 Vacation newVacation = new Vacation(0, title, lodging, startDate, endDate);
                 repo.insert(newVacation);
@@ -126,8 +126,18 @@ public class AddVacation extends AppCompatActivity {
                 Toast.makeText(this, "Vacation Updated", Toast.LENGTH_LONG).show();
             }
             finish();
-        } else {
+        } else if (!(start.isBefore(end))) {
             Toast toast = Toast.makeText(this, "End date must be after Start date", Toast.LENGTH_LONG);
+            View v = toast.getView();
+            v.setBackgroundColor(Color.parseColor("#FF4A4A"));
+            toast.show();
+        } else if (title.isEmpty()) {
+            Toast toast = Toast.makeText(this, "Please input a title", Toast.LENGTH_LONG);
+            View v = toast.getView();
+            v.setBackgroundColor(Color.parseColor("#FF4A4A"));
+            toast.show();
+        } else if (lodging.isEmpty()) {
+            Toast toast = Toast.makeText(this, "Please input a lodging type", Toast.LENGTH_LONG);
             View v = toast.getView();
             v.setBackgroundColor(Color.parseColor("#FF4A4A"));
             toast.show();
