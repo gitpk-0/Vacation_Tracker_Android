@@ -179,7 +179,7 @@
         android:backgroundTint="@color/purple_500"
         android:onClick="launchExcursionDashboard"
         android:text="@string/view_excursions_for_this_vacation"
-        android:textSize="18sp"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
