@@ -5,6 +5,7 @@ import android.app.DatePickerDialog;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,12 +19,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
 import wgu.patrick_kell_d308.Database.Repository;
 import wgu.patrick_kell_d308.Entities.Excursion;
+import wgu.patrick_kell_d308.Entities.Vacation;
 import wgu.patrick_kell_d308.R;
 import wgu.patrick_kell_d308.Receiver.DateReceiver;
 
@@ -44,6 +48,7 @@ public class ExcursionDetails extends AppCompatActivity {
 
     String dateFormat = "MM/dd/yyyy";
     SimpleDateFormat sdf = new SimpleDateFormat(dateFormat, Locale.US);
+    DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("MM/dd/yyyy", Locale.US);
     final Calendar calendar = Calendar.getInstance();
     DatePickerDialog.OnDateSetListener dateListener;
 
@@ -99,20 +104,36 @@ public class ExcursionDetails extends AppCompatActivity {
         date = excursionDatePickerBtn.getText().toString();
         vacationId = getIntent().getIntExtra("vid", -1);
 
+        Vacation vacation = repo.getVacationById(vacationId);
 
-        if (excursionId == -1) {
-            Excursion newExcursion = new Excursion(excursionId, title, date, vacationId);
-            repo.insert(newExcursion);
-            Toast.makeText(this, "New Excursion Added", Toast.LENGTH_LONG).show();
+        String vacationS = vacation.getStartDate();
+        String vacationE = vacation.getEndDate();
+
+        LocalDate excursionStart = LocalDate.parse(date, dateFormatter);
+        LocalDate vacationStart = LocalDate.parse(vacationS, dateFormatter);
+        LocalDate vacationEnd = LocalDate.parse(vacationE, dateFormatter);
+
+        boolean beforeAndAfter = excursionStart.isAfter(vacationStart) && excursionStart.isBefore(vacationEnd);
+        boolean equalTo = excursionStart.isEqual(vacationStart) || excursionStart.isEqual(vacationEnd);
+
+        if (beforeAndAfter || equalTo) {
+            if (excursionId == -1) {
+                Excursion newExcursion = new Excursion(excursionId, title, date, vacationId);
+                repo.insert(newExcursion);
+                Toast.makeText(this, "New Excursion Added", Toast.LENGTH_LONG).show();
+            } else {
+                Excursion updatedExcursion = new Excursion(excursionId, title, date, vacationId);
+                repo.update(updatedExcursion);
+                Toast.makeText(this, "Excursion Updated", Toast.LENGTH_LONG).show();
+            }
+
+            finish();
         } else {
-            Excursion updatedExcursion = new Excursion(excursionId, title, date, vacationId);
-            repo.update(updatedExcursion);
-            Toast.makeText(this, "Excursion Updated", Toast.LENGTH_LONG).show();
+            Toast toast = Toast.makeText(this, "Excursion date must be during the vacation.", Toast.LENGTH_LONG);
+            View v = toast.getView();
+            v.setBackgroundColor(Color.parseColor("#FF9696"));
+            toast.show();
         }
-
-
-        Intent backToExcursionDashboard = new Intent(ExcursionDetails.this, ExcursionDashboard.class);
-        startActivity(backToExcursionDashboard);
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
