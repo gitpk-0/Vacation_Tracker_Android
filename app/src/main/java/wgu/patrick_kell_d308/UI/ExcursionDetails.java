@@ -116,7 +116,7 @@ public class ExcursionDetails extends AppCompatActivity {
         boolean beforeAndAfter = excursionStart.isAfter(vacationStart) && excursionStart.isBefore(vacationEnd);
         boolean equalTo = excursionStart.isEqual(vacationStart) || excursionStart.isEqual(vacationEnd);
 
-        if (beforeAndAfter || equalTo) {
+        if ((beforeAndAfter || equalTo) && !title.isEmpty()) {
             if (excursionId == -1) {
                 Excursion newExcursion = new Excursion(excursionId, title, date, vacationId);
                 repo.insert(newExcursion);
@@ -128,8 +128,13 @@ public class ExcursionDetails extends AppCompatActivity {
             }
 
             finish();
-        } else {
-            Toast toast = Toast.makeText(this, "Excursion date must be during the vacation.", Toast.LENGTH_LONG);
+        } else if (!(beforeAndAfter || equalTo)) {
+            Toast toast = Toast.makeText(this, "Excursion date must be during the vacation", Toast.LENGTH_LONG);
+            View v = toast.getView();
+            v.setBackgroundColor(Color.parseColor("#FF4A4A"));
+            toast.show();
+        } else if (title.isEmpty()) {
+            Toast toast = Toast.makeText(this, "Please enter an excursion title", Toast.LENGTH_LONG);
             View v = toast.getView();
             v.setBackgroundColor(Color.parseColor("#FF4A4A"));
             toast.show();

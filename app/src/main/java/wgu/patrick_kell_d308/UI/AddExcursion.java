@@ -106,19 +106,25 @@ public class AddExcursion extends AppCompatActivity {
         boolean beforeAndAfter = eStart.isAfter(vStart) && eStart.isBefore(vEnd);
         boolean equalTo = eStart.isEqual(vStart) || eStart.isEqual(vEnd);
 
-        if (beforeAndAfter || equalTo) {
+        if ((beforeAndAfter || equalTo) && !title.isEmpty()) {
             if (excursionId == -1) {
-                Excursion newExcursion = new Excursion(0, title, date, associatedVacationID);
+                Excursion newExcursion = new Excursion(excursionId, title, date, vacationId);
                 repo.insert(newExcursion);
                 Toast.makeText(this, "New Excursion Added", Toast.LENGTH_LONG).show();
             } else {
-                Excursion updatedExcursion = new Excursion(excursionId, title, date, associatedVacationID);
+                Excursion updatedExcursion = new Excursion(excursionId, title, date, vacationId);
                 repo.update(updatedExcursion);
                 Toast.makeText(this, "Excursion Updated", Toast.LENGTH_LONG).show();
             }
+
             finish();
-        } else {
-            Toast toast = Toast.makeText(this, "Excursion date must be during the vacation.", Toast.LENGTH_LONG);
+        } else if (!(beforeAndAfter || equalTo)) {
+            Toast toast = Toast.makeText(this, "Excursion date must be during the vacation", Toast.LENGTH_LONG);
+            View v = toast.getView();
+            v.setBackgroundColor(Color.parseColor("#FF4A4A"));
+            toast.show();
+        } else if (title.isEmpty()) {
+            Toast toast = Toast.makeText(this, "Please enter an excursion title", Toast.LENGTH_LONG);
             View v = toast.getView();
             v.setBackgroundColor(Color.parseColor("#FF4A4A"));
             toast.show();
