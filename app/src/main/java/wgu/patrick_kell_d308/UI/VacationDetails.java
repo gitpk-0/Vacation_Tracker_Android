@@ -161,8 +161,7 @@ public class VacationDetails extends AppCompatActivity {
                 Toast.makeText(this, "Vacation Updated", Toast.LENGTH_LONG).show();
             }
 
-            Intent backToDashboard = new Intent(VacationDetails.this, VacationDashboard.class);
-            startActivity(backToDashboard);
+            finish();
         } else {
             Toast toast = Toast.makeText(this, "End date must be after Start date", Toast.LENGTH_LONG);
             View v = toast.getView();
@@ -261,9 +260,12 @@ public class VacationDetails extends AppCompatActivity {
 
                     if (excursions.size() > 0) {
                         int i = 0;
-                        while (i < 4) {
-                            Toast.makeText(this, "Error: To delete this vacation you " +
-                                    "must delete all excursions associated with it.", Toast.LENGTH_LONG).show();
+                        while (i < 2) {
+                            Toast toast = Toast.makeText(this, "Error: To delete this vacation you " +
+                                    "must delete all excursions associated with it.", Toast.LENGTH_LONG);
+                            View v = toast.getView();
+                            v.setBackgroundColor(Color.parseColor("#FF9696"));
+                            toast.show();
                             i++;
                         }
                     } else {
@@ -275,8 +277,6 @@ public class VacationDetails extends AppCompatActivity {
                     }
                 }
                 return true;
-
-
         }
         return super.onOptionsItemSelected(item);
     }
