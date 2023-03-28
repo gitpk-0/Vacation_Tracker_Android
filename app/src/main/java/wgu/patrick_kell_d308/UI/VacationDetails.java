@@ -39,7 +39,6 @@ public class VacationDetails extends AppCompatActivity {
     int id;
     String startDate;
     String endDate;
-
     Button startDatePickerBtn;
     Button endDatePickerBtn;
 
