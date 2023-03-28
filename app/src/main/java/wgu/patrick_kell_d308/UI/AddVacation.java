@@ -125,12 +125,11 @@ public class AddVacation extends AppCompatActivity {
                 repo.update(updatedVacation);
                 Toast.makeText(this, "Vacation Updated", Toast.LENGTH_LONG).show();
             }
-
             finish();
         } else {
             Toast toast = Toast.makeText(this, "End date must be after Start date", Toast.LENGTH_LONG);
             View v = toast.getView();
-            v.setBackgroundColor(Color.parseColor("#FF9696"));
+            v.setBackgroundColor(Color.parseColor("#FF4A4A"));
             toast.show();
         }
     }

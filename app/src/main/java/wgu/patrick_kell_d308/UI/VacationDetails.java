@@ -165,7 +165,7 @@ public class VacationDetails extends AppCompatActivity {
         } else {
             Toast toast = Toast.makeText(this, "End date must be after Start date", Toast.LENGTH_LONG);
             View v = toast.getView();
-            v.setBackgroundColor(Color.parseColor("#FF9696"));
+            v.setBackgroundColor(Color.parseColor("#FF4A4A"));
             toast.show();
         }
     }
@@ -264,7 +264,7 @@ public class VacationDetails extends AppCompatActivity {
                             Toast toast = Toast.makeText(this, "Error: To delete this vacation you " +
                                     "must delete all excursions associated with it.", Toast.LENGTH_LONG);
                             View v = toast.getView();
-                            v.setBackgroundColor(Color.parseColor("#FF9696"));
+                            v.setBackgroundColor(Color.parseColor("#FF4A4A"));
                             toast.show();
                             i++;
                         }
@@ -272,8 +272,7 @@ public class VacationDetails extends AppCompatActivity {
                         Vacation vacation = repo.getVacationById(id);
                         repo.delete(vacation);
                         Toast.makeText(this, "Vacation Deleted", Toast.LENGTH_LONG).show();
-                        Intent backToDashboard = new Intent(VacationDetails.this, VacationDashboard.class);
-                        startActivity(backToDashboard);
+                        finish();
                     }
                 }
                 return true;

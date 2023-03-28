@@ -120,7 +120,7 @@ public class AddExcursion extends AppCompatActivity {
         } else {
             Toast toast = Toast.makeText(this, "Excursion date must be during the vacation.", Toast.LENGTH_LONG);
             View v = toast.getView();
-            v.setBackgroundColor(Color.parseColor("#FF9696"));
+            v.setBackgroundColor(Color.parseColor("#FF4A4A"));
             toast.show();
         }
     }

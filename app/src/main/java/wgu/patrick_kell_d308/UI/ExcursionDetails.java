@@ -131,7 +131,7 @@ public class ExcursionDetails extends AppCompatActivity {
         } else {
             Toast toast = Toast.makeText(this, "Excursion date must be during the vacation.", Toast.LENGTH_LONG);
             View v = toast.getView();
-            v.setBackgroundColor(Color.parseColor("#FF9696"));
+            v.setBackgroundColor(Color.parseColor("#FF4A4A"));
             toast.show();
         }
     }
@@ -176,6 +176,14 @@ public class ExcursionDetails extends AppCompatActivity {
                 return true;
 
             case R.id.deleteExcursion:
+                excursionId = getIntent().getIntExtra("id", -1);
+                if (excursionId != -1) {
+                    Excursion excursion = repo.getExcursionById(excursionId);
+                    repo.delete(excursion);
+                    Toast.makeText(this, "Excursion Deleted", Toast.LENGTH_LONG).show();
+                    finish();
+                }
+
                 return true;
         }
         return super.onOptionsItemSelected(item);
