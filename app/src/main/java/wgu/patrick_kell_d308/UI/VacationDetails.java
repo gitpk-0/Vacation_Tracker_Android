@@ -23,9 +23,11 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 import wgu.patrick_kell_d308.Database.Repository;
+import wgu.patrick_kell_d308.Entities.Excursion;
 import wgu.patrick_kell_d308.Entities.Vacation;
 import wgu.patrick_kell_d308.R;
 import wgu.patrick_kell_d308.Receiver.DateReceiver;
@@ -252,27 +254,27 @@ public class VacationDetails extends AppCompatActivity {
                 }
                 return true;
 
-            // case R.id.deleteVacation:
-            //
-            //     if (id != -1) {
-            //         List<Excursion> excursions = repo.getExcursionsByVacaId(id);
-            //
-            //         if (excursions.size() > 0) {
-            //             int i = 0;
-            //             while (i < 4) {
-            //                 Toast.makeText(this, "Error: To delete this vacation you " +
-            //                         "must delete all excursions associated with it.", Toast.LENGTH_LONG).show();
-            //                 i++;
-            //             }
-            //         } else {
-            //             Vacation vacation = repo.getVacationById(id);
-            //             repo.delete(vacation);
-            //             Toast.makeText(this, "Vacation Deleted", Toast.LENGTH_LONG).show();
-            //             Intent backToDashboard = new Intent(VacationDetails.this, VacationDashboard.class);
-            //             startActivity(backToDashboard);
-            //         }
-            //     }
-            //     return true;
+            case R.id.deleteVacation:
+
+                if (id != -1) {
+                    List<Excursion> excursions = repo.getExcursionsByVacaId(id);
+
+                    if (excursions.size() > 0) {
+                        int i = 0;
+                        while (i < 4) {
+                            Toast.makeText(this, "Error: To delete this vacation you " +
+                                    "must delete all excursions associated with it.", Toast.LENGTH_LONG).show();
+                            i++;
+                        }
+                    } else {
+                        Vacation vacation = repo.getVacationById(id);
+                        repo.delete(vacation);
+                        Toast.makeText(this, "Vacation Deleted", Toast.LENGTH_LONG).show();
+                        Intent backToDashboard = new Intent(VacationDetails.this, VacationDashboard.class);
+                        startActivity(backToDashboard);
+                    }
+                }
+                return true;
 
 
         }
