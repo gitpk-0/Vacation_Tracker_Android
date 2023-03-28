@@ -5,6 +5,7 @@ import android.app.DatePickerDialog;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,6 +19,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -48,6 +51,7 @@ public class VacationDetails extends AppCompatActivity {
 
     String dateFormat = "MM/dd/yyyy";
     SimpleDateFormat sdf = new SimpleDateFormat(dateFormat, Locale.US);
+    DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("MM/dd/yyyy", Locale.US);
     final Calendar calendar = Calendar.getInstance();
     DatePickerDialog.OnDateSetListener startDateListener;
     DatePickerDialog.OnDateSetListener endDateListener;
@@ -143,19 +147,28 @@ public class VacationDetails extends AppCompatActivity {
         startDate = startDatePickerBtn.getText().toString();
         endDate = endDatePickerBtn.getText().toString();
 
-        if (id == -1) {
-            Vacation newVacation = new Vacation(0, title, lodging, startDate, endDate);
-            repo.insert(newVacation);
-            Toast.makeText(this, "New Vacation Added", Toast.LENGTH_LONG).show();
+        LocalDate start = LocalDate.parse(startDate, dateFormatter);
+        LocalDate end = LocalDate.parse(endDate, dateFormatter);
+
+        if (start.isBefore(end)) {
+            if (id == -1) {
+                Vacation newVacation = new Vacation(0, title, lodging, startDate, endDate);
+                repo.insert(newVacation);
+                Toast.makeText(this, "New Vacation Added", Toast.LENGTH_LONG).show();
+            } else {
+                Vacation updatedVacation = new Vacation(id, title, lodging, startDate, endDate);
+                repo.update(updatedVacation);
+                Toast.makeText(this, "Vacation Updated", Toast.LENGTH_LONG).show();
+            }
+
+            Intent backToDashboard = new Intent(VacationDetails.this, VacationDashboard.class);
+            startActivity(backToDashboard);
         } else {
-            Vacation updatedVacation = new Vacation(id, title, lodging, startDate, endDate);
-            repo.update(updatedVacation);
-            Toast.makeText(this, "Vacation Updated", Toast.LENGTH_LONG).show();
+            Toast toast = Toast.makeText(this, "End date must be after Start date", Toast.LENGTH_LONG);
+            View v = toast.getView();
+            v.setBackgroundColor(Color.parseColor("#FF9696"));
+            toast.show();
         }
-
-
-        Intent backToDashboard = new Intent(VacationDetails.this, VacationDashboard.class);
-        startActivity(backToDashboard);
     }
 
     public void launchExcursionDashboard(View view) {
