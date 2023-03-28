@@ -118,7 +118,7 @@ public class ExcursionDetails extends AppCompatActivity {
 
         if ((beforeAndAfter || equalTo) && !title.isEmpty()) {
             if (excursionId == -1) {
-                Excursion newExcursion = new Excursion(excursionId, title, date, vacationId);
+                Excursion newExcursion = new Excursion(0, title, date, vacationId);
                 repo.insert(newExcursion);
                 Toast.makeText(this, "New Excursion Added", Toast.LENGTH_LONG).show();
             } else {
@@ -188,7 +188,6 @@ public class ExcursionDetails extends AppCompatActivity {
                     Toast.makeText(this, "Excursion Deleted", Toast.LENGTH_LONG).show();
                     finish();
                 }
-
                 return true;
         }
         return super.onOptionsItemSelected(item);
