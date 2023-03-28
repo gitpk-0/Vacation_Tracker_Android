@@ -172,12 +172,7 @@ public class VacationDetails extends AppCompatActivity {
 
         String dateFormat = "MM/dd/yyyy";
         SimpleDateFormat sdf = new SimpleDateFormat(dateFormat, Locale.US);
-
-        Calendar now = Calendar.getInstance();
-        int hour = Calendar.HOUR;
-        // int oneHourMillis = 3600000;
         int oneDayMillis = 86400000;
-        // Long millisIntoCurrentDay = Long.valueOf(hour * oneHourMillis);
         Long currentTimeMillis = System.currentTimeMillis();
 
         switch (item.getItemId()) {
@@ -211,16 +206,12 @@ public class VacationDetails extends AppCompatActivity {
 
                 Long startTrigger = startDate.getTime();
                 Intent toDateReceiverStart = new Intent(VacationDetails.this, DateReceiver.class);
-                toDateReceiverStart.putExtra("key", vacationTitle.getText().toString() + " vacation starts today");
+                toDateReceiverStart.putExtra("contentText", vacationTitle.getText().toString() + " vacation starts today!");
+                toDateReceiverStart.putExtra("contentTitle", "\uD83D\uDE03  Have fun!  \uD83D\uDE03");
                 PendingIntent startSender = PendingIntent.getBroadcast(VacationDetails.this,
                         ++MainActivity.numAlert, toDateReceiverStart, PendingIntent.FLAG_IMMUTABLE);
                 AlarmManager startAlarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
 
-                // System.out.println("start trig: " + startTrigger.toString());
-                // System.out.println("current: " + currentTimeMillis.toString());
-                // System.out.println("dif: " + Math.abs(currentTimeMillis - startTrigger));
-                // System.out.println("dif less,equal to one day: " + (Math.abs(currentTimeMillis - startTrigger) <= oneDayMillis));
-                // System.out.println("start is in future: " + (startTrigger >= currentTimeMillis));
                 if (Math.abs(currentTimeMillis - startTrigger) <= oneDayMillis || startTrigger >= currentTimeMillis) {
                     startAlarmManager.set(AlarmManager.RTC_WAKEUP, startTrigger, startSender);
                 }
@@ -237,14 +228,12 @@ public class VacationDetails extends AppCompatActivity {
 
                 Long endTrigger = endDate.getTime();
                 Intent toDateReceiverEnd = new Intent(VacationDetails.this, DateReceiver.class);
-                toDateReceiverEnd.putExtra("key", vacationTitle.getText().toString() + " vacation ends today");
+                toDateReceiverEnd.putExtra("contentText", vacationTitle.getText().toString() + " vacation ends today.");
+                toDateReceiverEnd.putExtra("contentTitle", "\uD83D\uDC4B  Until next time!  \uD83D\uDC4B");
                 PendingIntent endSender = PendingIntent.getBroadcast(VacationDetails.this,
                         ++MainActivity.numAlert, toDateReceiverEnd, PendingIntent.FLAG_IMMUTABLE);
                 AlarmManager endAlarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
 
-                // System.out.println("end trig: " + endTrigger.toString());
-                // System.out.println("current: " + currentTimeMillis.toString());
-                // System.out.println("start: " + (Math.abs(currentTimeMillis - endTrigger) <= oneDayMillis));
                 if (Math.abs(currentTimeMillis - endTrigger) <= oneDayMillis || endTrigger >= currentTimeMillis) {
                     endAlarmManager.set(AlarmManager.RTC_WAKEUP, endTrigger, endSender);
                 }

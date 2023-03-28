@@ -7,7 +7,7 @@
     tools:context=".UI.MainActivity">
 
     <TextView
-        android:id="@+id/vacaymate"
+        android:id="@+id/vacationVault"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
@@ -36,7 +36,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vacaymate"
+        app:layout_constraintTop_toBottomOf="@+id/vacationVault"
         tools:ignore="MissingConstraints" />
 
     <Button

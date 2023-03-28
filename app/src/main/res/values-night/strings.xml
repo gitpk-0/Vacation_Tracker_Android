@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">VacationVault Vacation Tracker</string>
+    <string name="app_name">VacationVault</string>
     <string name="welcome">Organize and Track all of your Vacations</string>
-    <string name="dashboard">Dashboard</string>
+    <string name="dashboard">My Vacation Vault</string>
     <string name="vacationVault">VacationVault</string>
     <string name="title_activity_add_vacation">AddVacation</string>
     <!-- Strings used for fragments for navigation -->
@@ -12,7 +12,7 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="view_excursions_for_this_vacation">Associated Excursions</string>
+    <string name="view_excursions_for_this_vacation">Excursions</string>
     <string name="vacation_title">Vacation Title</string>
     <string name="lodging_type">Lodging Type</string>
     <string name="start_date">Start Date</string>
@@ -24,11 +24,11 @@
     <string name="excursion_date">Excursion Date</string>
     <string name="delete_excursion">Delete Excursion</string>
     <string name="notify_start">Notify Start</string>
+    <string name="notify_end">Notify End</string>
     <string name="delete_vacation">Delete Vacation</string>
     <string name="share_vacation">Share Vacation</string>
-    <string name="notify_end">Notify End</string>
     <string name="add_sample_data">Add Sample Data</string>
     <string name="remove_sample_data">Remove Sample Data</string>
     <string name="channel_name">date_channel</string>
-    <string name="channel_description" />
+    <string name="channel_description">vacation_tracker_app</string>
 </resources>

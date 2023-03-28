@@ -1,6 +1,9 @@
 package wgu.patrick_kell_d308.UI;
 
+import android.app.AlarmManager;
 import android.app.DatePickerDialog;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -16,11 +19,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
 
 import wgu.patrick_kell_d308.Database.Repository;
 import wgu.patrick_kell_d308.Entities.Excursion;
 import wgu.patrick_kell_d308.R;
+import wgu.patrick_kell_d308.Receiver.DateReceiver;
 
 /**
  * @author Patrick Kell
@@ -116,12 +121,41 @@ public class ExcursionDetails extends AppCompatActivity {
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
+
+        String dateFormat = "MM/dd/yyyy";
+        SimpleDateFormat sdf = new SimpleDateFormat(dateFormat, Locale.US);
+        int oneDayMillis = 86400000;
+        Long currentTimeMillis = System.currentTimeMillis();
+
         switch (item.getItemId()) {
             case android.R.id.home:
                 this.finish();
+                return true;
+
+            case R.id.notifyStart:
+                String startDateString = excursionDatePickerBtn.getText().toString();
+                Date startDate = null;
+                try {
+                    startDate = sdf.parse(startDateString);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+
+                Long startTrigger = startDate.getTime();
+                Intent toDateReceiverStart = new Intent(ExcursionDetails.this, DateReceiver.class);
+                toDateReceiverStart.putExtra("contentText", excursionTitle.getText().toString() + " excursion is today!");
+                toDateReceiverStart.putExtra("contentTitle", "\uD83C\uDF0E  Are you ready!?  \uD83C\uDF0E");
+                PendingIntent startSender = PendingIntent.getBroadcast(ExcursionDetails.this,
+                        ++MainActivity.numAlert, toDateReceiverStart, PendingIntent.FLAG_IMMUTABLE);
+                AlarmManager startAlarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+
+                if (Math.abs(currentTimeMillis - startTrigger) <= oneDayMillis || startTrigger >= currentTimeMillis) {
+                    startAlarmManager.set(AlarmManager.RTC_WAKEUP, startTrigger, startSender);
+                }
+                return true;
 
             case R.id.deleteExcursion:
-                System.out.println("delete excursion");
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }
