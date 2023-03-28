@@ -13,7 +13,7 @@
         android:layout_marginTop="120dp"
         android:layout_marginBottom="24dp"
         android:gravity="center_horizontal"
-        android:text="@string/vacaymate"
+        android:text="@string/vacationVault"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
         android:textColor="#673AB7"
@@ -42,7 +42,7 @@
     <Button
         android:id="@+id/dashboardBtn"
         android:layout_width="294dp"
-        android:layout_height="76dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="24dp"
         android:gravity="center_horizontal"

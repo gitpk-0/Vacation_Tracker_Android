@@ -42,7 +42,7 @@
         <activity
             android:name=".UI.VacationDashboard"
             android:exported="false"
-            android:label="My Vacation Dashboard"
+            android:label="My Vacation Vault"
             android:parentActivityName=".UI.MainActivity" />
         <activity
             android:name=".UI.ExcursionDashboard"

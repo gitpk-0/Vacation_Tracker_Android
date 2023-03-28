@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">VacayMate Vacation Tracker</string>
+    <string name="app_name">VacationVault Vacation Tracker</string>
     <string name="welcome">Organize and Track all of your Vacations</string>
     <string name="dashboard">Dashboard</string>
-    <string name="vacaymate">VacayMate</string>
+    <string name="vacationVault">VacationVault</string>
     <string name="title_activity_add_vacation">AddVacation</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
