@@ -1,0 +1,375 @@
+commit 88cc4ecc2ffa5b348e938164c69eb8b68d5114fd
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Tue Mar 28 20:59:28 2023 -0400
+
+    README
+
+commit 4c3b363e6518d02b3173cac7ee69154b925bf6a8
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Tue Mar 28 20:58:13 2023 -0400
+
+    README
+
+commit d3e6df537233c690392fbccb1a8c3e57ff3e82a7
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Tue Mar 28 16:56:38 2023 -0400
+
+    B5 - add excursion fix
+
+commit 2c956a0d0c86bfb5f479e45aff65beb3cc318fa5
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Tue Mar 28 16:43:03 2023 -0400
+
+    B5 - excursion input validation
+
+commit 2a27ad0c60cee3cea338a00b64af18da2f6ddd54
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Tue Mar 28 16:40:01 2023 -0400
+
+    B3 - vacation input validation
+
+commit de981531c7f1c083c5282d97c525a410d77528e0
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Tue Mar 28 16:06:01 2023 -0400
+
+    B5 - delete excursion
+
+commit 7093cf9d6bd37b4602022be24bdd7368c0a8d80c
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Tue Mar 28 15:10:00 2023 -0400
+
+    B3 - vacation date validation
+
+commit 299145299d8e35875ba0500cd9ed2e9b512d2d99
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Tue Mar 28 15:02:41 2023 -0400
+
+    B5 - excursion date validation
+
+commit d4e6a90faf7d8be974c869652f7f08cc3e133bd2
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Tue Mar 28 14:43:17 2023 -0400
+
+    B1 - delete vacation validation
+
+commit c5f7ad3b214a6386c027574ce9680b81fa7b491e
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Tue Mar 28 14:42:44 2023 -0400
+
+    B3 - vacation date validation
+
+commit 761709601ef6a65391d6c9d26c6afe1eacc5ea80
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Tue Mar 28 14:39:13 2023 -0400
+
+    B3 - vacation date validation
+
+commit c220aad670fc4459a1606a8cffa8b5bda3d8d86c
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Tue Mar 28 12:07:20 2023 -0400
+
+    B3 - delete vacation
+
+commit 9d94c4baf547651d0c357e365936eaeea5e4b79d
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Tue Mar 28 11:49:09 2023 -0400
+
+    B5 - excursion alert
+
+commit 164aa2a6cc2a99dab6223f1a93a27b82b565a85d
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Tue Mar 28 11:08:29 2023 -0400
+
+    B3 - vacation alerts (start & end) -- fixed time logic
+
+commit 52441f8c3f090eeb92261d93d5b82759ebc35594
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Tue Mar 28 11:07:46 2023 -0400
+
+    B3 - vacation alerts (start & end) -- fixed time logic
+
+commit 54bda70824b9050edf30b5c431a8cac806bbecf6
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Tue Mar 28 10:08:04 2023 -0400
+
+    B3 - vacation alerts (start & end)
+
+commit 6a706e37f165c6704c0e17f39af7038bfb7321d7
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Mon Mar 27 11:44:45 2023 -0400
+
+    B3 - vacation alerts start (need to add date detection logic)
+
+commit 7116bd3d012a59a6c1849c21f3e04055aa277562
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Mon Mar 27 10:33:59 2023 -0400
+
+    B3 - share vacation details
+
+commit 4da299251a096c3dd0e59936619432f6914fa1b3
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Mon Mar 27 10:06:50 2023 -0400
+
+    B5 - changes fixed
+
+commit 46cc3e7f1104a516ba9776aa5a5b317b8c24e0db
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Mon Mar 27 10:05:58 2023 -0400
+
+    B5 - changes fixed
+
+commit f90db336aaafab9fa17f0175b2bee3ef763ba5e7
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Mon Mar 27 10:05:12 2023 -0400
+
+    B5 - changes fixed
+
+commit 6b545220c4eb983273c2526d0d23127538b57c59
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Mon Mar 27 10:04:45 2023 -0400
+
+    B5 - changes fixed
+
+commit 2a54624aa2871b3ddc962212cf13186f16bf2dcf
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Mon Mar 27 09:57:03 2023 -0400
+
+    B5 - test2
+
+commit 20397f65f63e54265bac278f37ac8361584ace33
+Merge: 22cfee6 3a3221b
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Mon Mar 27 09:55:52 2023 -0400
+
+    Merge remote-tracking branch 'origin/main'
+    
+    # Conflicts:
+    #       .idea/deploymentTargetDropDown.xml
+    #       app/src/main/AndroidManifest.xml
+    #       app/src/main/java/wgu/patrick_kell_d308/Adapter/ExcursionAdapter.java
+    #       app/src/main/java/wgu/patrick_kell_d308/Adapter/VacationAdapter.java
+    #       app/src/main/java/wgu/patrick_kell_d308/Database/Repository.java
+    #       app/src/main/java/wgu/patrick_kell_d308/UI/DashboardVacation.java
+    #       app/src/main/java/wgu/patrick_kell_d308/UI/DetailsExcursion.java
+
+commit 22cfee66c00dfb226c57f2e5885439122c6d8f13
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Mon Mar 27 09:55:30 2023 -0400
+
+    B5 - test
+
+commit 401768177d3911ede3e78af7c8c24bbb9cff5a8d
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Mon Mar 27 09:46:34 2023 -0400
+
+    B5 - share excursion
+
+commit 1cfaf08a5ce74e91dbf65da489818a06167c7a5b
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Mon Mar 27 09:43:25 2023 -0400
+
+    B5 - format test
+
+commit 540745863cacbf98971bab7ef59c72ed696f78c0
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Mon Mar 27 09:42:01 2023 -0400
+
+    B5 - adapter package, delete excursion/vacation menu items
+
+commit 6328ef9e9c815a0adc45ae42f413c7d75be3b0da
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Mon Mar 27 09:19:07 2023 -0400
+
+    B5 - singleTop excursionDashboard, changed Thread.Sleep time amount to 100 millis
+
+commit 3a3221b4fe828e6e2ec1e31c3c237b4cf6b3c083
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Mon Mar 27 08:13:00 2023 -0400
+
+    B5 - ui refactor
+
+commit 28e76a951955eade5d9d4eabb837d02bebe123dd
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Mon Mar 27 08:08:45 2023 -0400
+
+    B5 - Adapter package
+
+commit bcf828e2687b0e93a0b7d38a3ffc76285d489cef
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Sun Mar 26 13:52:44 2023 -0400
+
+    B5 - android:launchMode="singleTop" (Prevents ActionBar back/up button from destroying parent activity)
+
+commit a6a7fe402334feb9e8a44967bcdff1c828ad1ff9
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Sun Mar 26 13:03:21 2023 -0400
+
+    B5 - Dashboard items, wrap content
+
+commit 886493adcbfc4f94058809922425877cd8c75570
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Sat Mar 25 21:09:58 2023 -0400
+
+    B5 - enter, edit, excursion
+
+commit f32a63b2a2ca0d985463a8bdab10f4ac667dd343
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Sat Mar 25 16:21:50 2023 -0400
+
+    B4 - Detailed view, enter, edit excursion details
+
+commit 496c07f4aafbd71e08f20d43690620de7bcec168
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Sat Mar 25 15:36:40 2023 -0400
+
+    B3 - Detailed view, enter, edit vacation details
+
+commit d9ca122f7f8bdf6c7398d69c1d4bf2b939031605
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Sat Mar 25 15:15:47 2023 -0400
+
+    B2 - Add Vacation functionality
+
+commit ae9a9c178fc4a258681c0f38714b18fdb7083a98
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Sat Mar 25 15:15:13 2023 -0400
+
+    B2 - Add Vacation functionality
+
+commit be6ea08cf1e7e4a717d8db53d3186b0210ad1d46
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Fri Mar 24 18:06:03 2023 -0400
+
+    B2 - Vacation Details formatting
+
+commit 18b6e44252358aeb3806bc29be117bb1bf6f4af2
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Fri Mar 24 15:52:03 2023 -0400
+
+    B2 - Save Vacation Functionality
+
+commit fa4f40590ca544b587250abfce81a0c6a6fef611
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Fri Mar 24 14:45:54 2023 -0400
+
+    B2 - Start/End Date Picker functionality
+
+commit 162891f071bb843883f89e99dd48ceef2db76ac2
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Fri Mar 24 10:51:47 2023 -0400
+
+    B2 - Add Vacation Details
+
+commit 129ed65eff632135867ed3f2267e5bf18ceb4a59
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Thu Mar 23 14:57:27 2023 -0400
+
+    B2 - View Vacation Details
+
+commit 767b258c29f1c13c230de4b7b46a60c378b4f0d1
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Thu Mar 23 11:37:26 2023 -0400
+
+    B1 - Vacation Adapter
+
+commit e9094deacdbd38c3d14befc836cd630257f5890e
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Wed Mar 22 10:05:22 2023 -0400
+
+    B1 - Add excursion
+
+commit 4a948f0588be483edeac9b4fdf3ced7c46e582e0
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Wed Mar 22 09:46:03 2023 -0400
+
+    B1 - Sample data remove option
+
+commit 35d115b42e355fff86702e850faa62194ef81d3f
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Wed Mar 22 09:37:54 2023 -0400
+
+    B1 - Sample data added to database
+
+commit bbb02651eec7f24fc8313ee042d8b9c237ac6413
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Wed Mar 22 08:59:44 2023 -0400
+
+    B1 - Repository infrastructure in place
+
+commit 1bd4ea3f96d67b18f6ea9eeb9fdeec6db00e2657
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Tue Mar 21 19:54:42 2023 -0400
+
+    B1 - database start
+
+commit e005dc5d1f8c101d3eda55cf88c0a01b7e9cbe13
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Tue Mar 21 19:44:05 2023 -0400
+
+    B1 - DAO
+
+commit 49d3d3715a07a538092ff05f52c5d8743807c37e
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Tue Mar 21 19:35:11 2023 -0400
+
+    B1 - Entities (excursion update)
+
+commit 42b55ace594311985b370f5b4651101c4c00546a
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Tue Mar 21 19:31:41 2023 -0400
+
+    B1 - Entities
+
+commit 1398e7a3a741c17e11137fd2c00739658b44bd02
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Tue Mar 21 19:23:20 2023 -0400
+
+    B1 - Entities created, build gradle updated
+
+commit bef4e4679004295e301c655a68854236844f3259
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Tue Mar 21 19:13:11 2023 -0400
+
+    B1 - Entities created, build gradle updated
+
+commit 555945cefed69d073d825d2e6a90423531ae368a
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Tue Mar 21 16:36:26 2023 -0400
+
+    B1 - Add Vacation(s)
+
+commit d11fbb8cce35b95476696dce10b05d816ebb66e1
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Tue Mar 21 16:02:51 2023 -0400
+
+    B1 - launch Dashboard
+
+commit 260f8edeef5451823e6a7b542984645ff44b5f79
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Tue Mar 21 15:53:02 2023 -0400
+
+    B1 - Welcome Screen complete, start Dashboard
+
+commit 2888007e16633808798e348b7f9936e9acec9dfa
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Tue Mar 21 11:47:50 2023 -0400
+
+    B1 - Welcome Screen (fixed ic_launcher_foreground not found error)
+
+commit 22f7a7b577138f88317436eac115aed313ddbcfd
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Tue Mar 21 11:39:55 2023 -0400
+
+    B1 - Welcome Screen
+
+commit 6905b8a902c5ef40b6e17386f708c3998d6be77e
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Tue Mar 21 10:46:50 2023 -0400
+
+    github initial
+
+commit 8ef7c2b40ab503cbda3af475931bc73c96f0d8a2
+Author: gitpk-0 <kell108p@protonmail.com>
+Date:   Tue Mar 21 10:33:38 2023 -0400
+
+    initial
